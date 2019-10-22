@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MyTomcatLearnDemo:war">
+    <output-path>$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war</output-path>
+    <root id="archive" name="MyTomcatLearnDemo_war.war">
+      <element id="artifact" artifact-name="MyTomcatLearnDemo:war exploded" />
+    </root>
+  </artifact>
+</component>
