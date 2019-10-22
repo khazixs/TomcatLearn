@@ -8,7 +8,7 @@
         <!--    配置Servlet类路径-->
     <servlet>
         <servlet-name>loginService</servlet-name>
-        <servlet-class>com.IceCoLa.servlet.LoginServiceServlet</servlet-class>
+        <servlet-class>com.IceCoLa.Learn.servlet.LoginServiceServlet</servlet-class>
     </servlet>
     <!--    配置访问方式 -->
     <servlet-mapping>
@@ -17,7 +17,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>login</servlet-name>
-        <servlet-class>com.IceCoLa.servlet.LoginServlet</servlet-class>
+        <servlet-class>com.IceCoLa.Learn.servlet.LoginServlet</servlet-class>
     </servlet>
     <!--    配置访问方式 -->
     <servlet-mapping>
@@ -27,7 +27,7 @@
 
     <servlet>
         <servlet-name>my2</servlet-name>
-        <servlet-class>com.IceCoLa.servlet.MyServlet2</servlet-class>
+        <servlet-class>com.IceCoLa.Learn.servlet.MyServlet2</servlet-class>
     </servlet>
     <!--    配置访问方式 -->
     <servlet-mapping>
@@ -37,7 +37,7 @@
 
     <servlet>
         <servlet-name>main</servlet-name>
-        <servlet-class>com.IceCoLa.servlet.MainServlet</servlet-class>
+        <servlet-class>com.IceCoLa.Learn.servlet.MainServlet</servlet-class>
     </servlet>
     <!--    配置访问方式 -->
     <servlet-mapping>
@@ -47,11 +47,21 @@
 
     <servlet>
         <servlet-name>ck</servlet-name>
-        <servlet-class>com.IceCoLa.servlet.CookieServlet</servlet-class>
+        <servlet-class>com.IceCoLa.Learn.servlet.CookieServlet</servlet-class>
     </servlet>
     <!--    配置访问方式 -->
     <servlet-mapping>
         <servlet-name>ck</servlet-name>
         <url-pattern>/ck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>gck</servlet-name>
+        <servlet-class>com.IceCoLa.Learn.servlet.GetCookieServlet</servlet-class>
+    </servlet>
+    <!--    配置访问方式 -->
+    <servlet-mapping>
+        <servlet-name>gck</servlet-name>
+        <url-pattern>/gck</url-pattern>
     </servlet-mapping>
 </web-app>

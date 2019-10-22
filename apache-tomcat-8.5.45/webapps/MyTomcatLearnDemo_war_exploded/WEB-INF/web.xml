@@ -54,4 +54,14 @@
         <servlet-name>ck</servlet-name>
         <url-pattern>/ck</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>gck</servlet-name>
+        <servlet-class>com.IceCoLa.servlet.GetCookieServlet</servlet-class>
+    </servlet>
+    <!--    配置访问方式 -->
+    <servlet-mapping>
+        <servlet-name>gck</servlet-name>
+        <url-pattern>/gck</url-pattern>
+    </servlet-mapping>
 </web-app>
