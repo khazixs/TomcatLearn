@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:02:44 +0800] "GET /TomcatLearn_war_exploded/ HTTP/1.1" 404 1103
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:02:44 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:02:57 +0800] "GET /TommcatLearn_war_exploded/ HTTP/1.1" 404 1104
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:13:26 +0800] "GET /TomcatLearn_war_exploded/ HTTP/1.1" 200 1472
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:13:26 +0800] "GET /TomcatLearn_war_exploded/images/tomcat.gif HTTP/1.1" 200 2066
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:13:26 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:13:32 +0800] "GET /TomcatLearn_war HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:13:32 +0800] "GET /TomcatLearn_war/ HTTP/1.1" 404 1094
+0:0:0:0:0:0:0:1 - - [22/Oct/2019:10:13:38 +0800] "GET /TomcatLearn_war/login HTTP/1.1" 404 1099

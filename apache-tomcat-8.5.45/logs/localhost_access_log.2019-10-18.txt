@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [18/Oct/2019:14:24:41 +0800] "GET /TommcatLearn_war_exploded/ HTTP/1.1" 200 413
+0:0:0:0:0:0:0:1 - - [18/Oct/2019:14:24:41 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [18/Oct/2019:14:24:43 +0800] "GET /TommcatLearn_war_exploded/login?join=%E8%BF%9B%E5%85%A5%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2 HTTP/1.1" 200 546
+0:0:0:0:0:0:0:1 - - [18/Oct/2019:14:24:54 +0800] "POST /TommcatLearn_war_exploded/loginStore HTTP/1.1" 200 43
