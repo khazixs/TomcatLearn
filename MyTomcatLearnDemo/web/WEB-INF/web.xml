@@ -4,8 +4,40 @@
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
            version="2.5">
-    <!--    配置Servlet -->
-        <!--    配置Servlet类路径-->
+
+    <servlet>
+        <servlet-name>scs</servlet-name>
+        <servlet-class>com.IceCoLa.Learn.servlet.ServletContextServlet</servlet-class>
+    </servlet>
+    <!--    配置访问方式 -->
+    <servlet-mapping>
+        <servlet-name>scs</servlet-name>
+        <url-pattern>/scs</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>com.IceCoLa.Learn.servlet.TestServlet</servlet-class>
+    </servlet>
+    <!--    配置访问方式 -->
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ss</servlet-name>
+        <servlet-class>com.IceCoLa.Learn.servlet.SessionServlet</servlet-class>
+    </servlet>
+    <!--    配置访问方式 -->
+    <servlet-mapping>
+        <servlet-name>ss</servlet-name>
+        <url-pattern>/ss</url-pattern>
+    </servlet-mapping>
+
+
     <servlet>
         <servlet-name>loginService</servlet-name>
         <servlet-class>com.IceCoLa.Learn.servlet.LoginServiceServlet</servlet-class>
@@ -15,6 +47,9 @@
         <servlet-name>loginService</servlet-name>
         <url-pattern>/loginService</url-pattern>
     </servlet-mapping>
+
+
+
     <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>com.IceCoLa.Learn.servlet.LoginServlet</servlet-class>

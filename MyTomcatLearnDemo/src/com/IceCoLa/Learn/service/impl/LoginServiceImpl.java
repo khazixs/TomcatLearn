@@ -17,4 +17,9 @@ public class LoginServiceImpl implements LoginService {
 //        System.out.println("QAQ");
         return ld.checkLoginDao(userName,password);
     }
+
+    @Override
+    public User checkUidService(String uid) throws SQLException {
+        return ld.checkUidDao(uid);
+    }
 }

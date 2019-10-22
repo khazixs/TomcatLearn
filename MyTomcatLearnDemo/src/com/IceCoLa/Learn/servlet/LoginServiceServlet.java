@@ -48,7 +48,7 @@ public class LoginServiceServlet extends HttpServlet {
             //创建COOKIE信息实现三天免登录
             Cookie c = new Cookie("uid",u.getUid()+"");
             c.setMaxAge(3*24*3600);
-            c.setPath("/MyTomcatLearnDemo_war_exploded/ck");
+            c.setPath("/MyTomcatLearnDemo_war_exploded/gck");
             resp.addCookie(c);
 //          req.getRequestDispatcher("main").forward(req,resp);//使用重定向
             resp.sendRedirect("main");
