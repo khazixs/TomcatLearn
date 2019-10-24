@@ -18,6 +18,7 @@ public class TestServlet extends HttpServlet {
 //        System.out.println(hs.getAttribute("key"));
 //        System.out.println(hs.getId());
         ServletContext sc = this.getServletContext();
+
         System.out.println(sc.getAttribute("str"));
     }
 }

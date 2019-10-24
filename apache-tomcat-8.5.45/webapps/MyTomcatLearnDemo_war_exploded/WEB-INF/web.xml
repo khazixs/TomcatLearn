@@ -4,6 +4,27 @@
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
            version="2.5">
+<!--    配置全局数据-->
+    <context-param>
+        <param-name>name</param-name>
+        <param-value>wuhan</param-value>
+    </context-param>
+
+    <servlet>
+        <description>this is the description of aaa</description>
+        <display-name>this is the display name of aaa</display-name>
+        <servlet-name>sg</servlet-name>
+        <servlet-class>com.IceCoLa.Learn.servlet.ServletConfigServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </servlet>
+    <!--    配置访问方式 -->
+    <servlet-mapping>
+        <servlet-name>sg</servlet-name>
+        <url-pattern>/sg</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>scs</servlet-name>
@@ -99,4 +120,5 @@
         <servlet-name>gck</servlet-name>
         <url-pattern>/gck</url-pattern>
     </servlet-mapping>
+
 </web-app>

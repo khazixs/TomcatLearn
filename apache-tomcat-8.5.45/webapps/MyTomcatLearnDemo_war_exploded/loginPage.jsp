@@ -20,7 +20,7 @@
 <%
     String str = (String) request.getAttribute("str");
     if(str!=null){
-        response.getWriter().write("alert("+str+")");
+        response.getWriter().write(str);
     }
 %>
 </html>
