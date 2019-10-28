@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 //session 解决一个用户的不同请求处理的数据共享问题
-//原理：用户第一次访问服务器，服务器会创建一个session对象给次用户，并将该session对象的Jsessionid使用cookie技术存储到浏览器中，保证用户的其他请求能够获取同一个session对象，也保证了不同的请求能够获取共享数据
-//特点：服务器端的存储技术，存储在服务器，有服务器进行创建，依赖cookie技术，有效期是一次会话
+//原理：用户第一次访问服务器，服务器会创建一个session对象给此用户，并将该session对象的Jsessionid使用cookie技术存储到浏览器中，保证用户的其他请求能够获取同一个session对象，也保证了不同的请求能够获取共享数据
+//特点：服务器端的存储技术，存储在服务器，有服务器进行创建，依赖cookie技术，有效期是一次会话，关闭浏览器即销毁
 //使用：创建session对象/获取session对象都是一句话
 //HttpSession hs = req.getSession();
 //如果请求中拥有session标识Jsessionid，则返回其对应的session队形
