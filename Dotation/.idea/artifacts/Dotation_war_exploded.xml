@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="Dotation:war exploded">
+    <output-path>$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/Dotation_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Dotation" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.48-bin" />
+          <element id="library" level="project" name="gson-2.8.5" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Dotation/web/Web" />
+    </root>
+  </artifact>
+</component>
