@@ -1,8 +1,6 @@
-package com.IceCoLa.Test;
-
-import com.IceCoLa.Login.Dao.Impl.UsersDaoImpl;
-import com.IceCoLa.Login.Dao.UsersDao;
-import com.IceCoLa.Login.Pojo.User;
+import com.IceCoLa.dao.impl.UsersDaoImpl;
+import com.IceCoLa.dao.UsersDao;
+import com.IceCoLa.pojo.User;
 
 import java.sql.SQLException;
 import java.util.Arrays;

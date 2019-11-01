@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="Dotation:war">
-    <output-path>$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/Dotation_war</output-path>
-    <root id="archive" name="Dotation_war.war">
-      <element id="artifact" artifact-name="Dotation:war exploded" />
-    </root>
-  </artifact>
-</component>

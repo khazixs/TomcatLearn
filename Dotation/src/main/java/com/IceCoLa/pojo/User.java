@@ -1,4 +1,4 @@
-package com.IceCoLa.Login.Pojo;
+package com.IceCoLa.pojo;
 
 public class User {
     private int id;

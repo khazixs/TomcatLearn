@@ -1,6 +1,6 @@
-package com.IceCoLa.Login.Dao;
+package com.IceCoLa.dao;
 
-import com.IceCoLa.Login.Pojo.User;
+import com.IceCoLa.pojo.User;
 
 import java.sql.SQLException;
 

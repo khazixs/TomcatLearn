@@ -1,8 +1,7 @@
-package com.IceCoLa.Login.Dao.Impl;
+package com.IceCoLa.dao.impl;
 
-import com.IceCoLa.Login.Dao.UsersDao;
-import com.IceCoLa.Login.Pojo.User;
-import com.sun.org.apache.regexp.internal.RE;
+import com.IceCoLa.dao.UsersDao;
+import com.IceCoLa.pojo.User;
 
 import java.sql.*;
 
