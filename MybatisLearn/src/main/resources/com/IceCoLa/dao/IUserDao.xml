@@ -8,7 +8,7 @@
         select * from user
     </select>
 
-    <insert id="saveUser" keyProperty="id" useGeneratedKeys="true">
+    <insert id="saveUser" keyProperty="id" useGeneratedKeys="true" parameterType="com.IceCoLa.domain.User">
         insert into user(username,birthday,sex,address)value(#{username},#{birthday},#{sex},#{address})
     </insert>
 
@@ -30,5 +30,9 @@
 
     <select id="findTotal" resultType="java.lang.Integer">
         select count(id) from user
+    </select>
+
+    <select id="findByPage" resultType="com.IceCoLa.domain.User" parameterType="map">
+        select * from user limit #{pageStart},#{pageSize}
     </select>
 </mapper>

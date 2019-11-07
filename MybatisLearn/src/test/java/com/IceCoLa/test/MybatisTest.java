@@ -29,9 +29,10 @@ public class MybatisTest {
         inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
         //2.创建SqlSessionFactory工厂
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
-//        3.使用工厂对象创建session对象
-        sqlSession = factory.openSession();
-//        4.使用session对象生成代理
+        // 3.使用工厂对象创建session对象
+        sqlSession = factory.openSession();//可以传递参数true，表示自动提交事务，默认SqlS
+        // ession是不自动提交事务的
+        // 4.使用session对象生成代理
         userDao = sqlSession.getMapper(IUserDao.class);
     }
 
@@ -73,7 +74,7 @@ public class MybatisTest {
 
     @Test
     public void testDelete() {
-        userDao.deleteUser(6);
+        userDao.deleteUser(15);
     }
 
     @Test

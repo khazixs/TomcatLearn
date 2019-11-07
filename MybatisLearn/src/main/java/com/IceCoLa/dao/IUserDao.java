@@ -3,7 +3,9 @@ package com.IceCoLa.dao;
 import com.IceCoLa.domain.User;
 import org.apache.ibatis.annotations.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /*
 * 用户持久层接口*/
@@ -25,4 +27,6 @@ public interface IUserDao {
     List<User> findByName(String username);
 //    @Select("select count(id) from user")
     int findTotal();
+
+    List<User> findByPage(Map map);
  }
