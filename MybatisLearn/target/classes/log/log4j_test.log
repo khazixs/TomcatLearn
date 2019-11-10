@@ -41,3 +41,114 @@ DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
 DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
 DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: 0(Integer), 3(Integer)
 DEBUG main com.IceCoLa.dao.IUserDao.findByPage - <==      Total: 3
+DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==>  Preparing: select count(id) from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
+DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: 2(Integer), 2(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByPage - <==      Total: 2
+DEBUG main com.IceCoLa.dao.IUserDao.findById - ==>  Preparing: select * from user WHERE id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findById - ==> Parameters: 2(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findById - <==      Total: 1
+DEBUG main com.IceCoLa.dao.IUserDao.findById - ==>  Preparing: select * from user WHERE id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findById - ==> Parameters: 2(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findById - <==      Total: 1
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %小%(String)
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 0
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 3
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %test%(String)
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 0
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE order by username 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE soundex(username) = soundex('bl') 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 2
+DEBUG main com.IceCoLa.dao.IUserDao.findById - ==>  Preparing: select * from user WHERE id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findById - ==> Parameters: 2(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findById - <==      Total: 1
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 3
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 8
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 3
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE soundex(username) = soundex('bl') 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 2
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id=? where id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET user.username=?,user.birthday=?,user.sex=?,user.address=? where user.id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: lan(String), 2019-11-10 13:51:13.002(Timestamp), 男(String), Japan(String), 5(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - <==    Updates: 1
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET id = ? username=?,birthday=?,sex=?,address=? where id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET id = ? username=?,birthday=?,sex=?,address=? where id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: 5(Integer), lan(String), 2019-11-10 13:55:05.756(Timestamp), 男(String), Japan(String), 5(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET id = 1 username=?,birthday=?,sex=?,address=? where id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: lan(String), 2019-11-10 13:56:27.695(Timestamp), 男(String), Japan(String), 5(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id = ? 
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: lan(String), 2019-11-10 13:57:04.146(Timestamp), 男(String), Japan(String), 9(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.updateUser - <==    Updates: 0
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 8
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
+DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 2
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ? ? ? ? ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ? ? ? ? ? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ( ? , ? , ? , ? , ? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ( ? , ? , ? , ? , ? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user where id in ( ? , ? , ? , ? , ? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - <==      Total: 5
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user where id in ( ? , ? , ? , ? , ? , ? , ? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 8(Integer), 13(Integer), 17(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByList - <==      Total: 5
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? , default,?,?,?,? , default,?,?,?,? , default,?,?,?,? , default,?,?,?,? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: ayDa(String), null, null, null, ayDavBhb(String), null, null, null, ayDavBhbhNh[(String), null, null, null, ayDavBhbhNh[NEwb(String), null, null, null, ayDavBhbhNh[NEwbAKex(String), null, null, null
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: EuqJH(String), null, null, null, tBisg(String), null, null, null, gTNYK(String), null, null, null, quWQL(String), null, null, null, QUqoW(String), null, null, null
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: SQhDf(String), null, null, null, wWxXu(String), null, null, null, ilXCv(String), null, null, null, WCxaY(String), null, null, null, ppqdW(String), null, null, null
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: gsnrr(String), null, null, null, nkroi(String), null, null, null, aafqo(String), null, null, null, ulsub(String), null, null, null, wutlt(String), null, null, null
+DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13

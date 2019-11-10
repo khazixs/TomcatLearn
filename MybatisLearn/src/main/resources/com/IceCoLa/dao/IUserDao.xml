@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dte/mybatis-3-mapper.dtd">
 <mapper namespace="com.IceCoLa.dao.IUserDao">
+<!--    表示对二级缓存允许访问，即一个SqlSessionFactory对象有一个一个缓存，而不是一个SqlSession对象一个缓存，此时由一个factory对象产生的两个
+SqlSession对象可以公用一份缓存-->
+    <cache readOnly="true"/>
     <!--配置查询所有-->
     <select id="findAll" resultType="com.IceCoLa.domain.User">
         select * from user
@@ -12,20 +15,47 @@
         insert into user(username,birthday,sex,address)value(#{username},#{birthday},#{sex},#{address})
     </insert>
 
-    <update id="updateUser">
-        update user set username=#{username},birthday=#{birthday},sex=#{sex},address=#{address} where id=#{id}
+    <update id="updateUser" parameterType="com.IceCoLa.domain.User">
+        update user
+        <!--        set能够先去掉字串末尾的逗号，再在字串前边加一个set-->
+        <set>
+            <if test="user != null">
+                username=#{user.username},birthday=#{user.birthday},sex=#{user.sex},address=#{user.address}
+            </if>
+        </set>
+        where id = #{user.id}
     </update>
 
     <delete id="deleteUser">
         delete from user where id = #{id}
     </delete>
 
-    <select id="findById" resultType="com.IceCoLa.domain.User">
-        select * from user where id = #{id}
+    <select id="findById" resultType="com.IceCoLa.domain.User" parameterType="java.lang.Integer">
+        select * from user
+        <where>
+            <!--OGNL表达式，直接写,这里需要在接口上加上@Param给参数加上别名，不然取不到值-->
+            <if test="userId!=null">
+                <!--此处也是使用自定义的参数别名-->
+                and id = #{userId}
+            </if>
+        </where>
     </select>
 
     <select id="findByName" resultType="com.IceCoLa.domain.User">
-        select * from user where username like #{username}
+        select * from user
+        <!--        where标签能在字串前先去掉第一个出现的and 再加一个where-->
+        <where>
+            <choose>
+                <when test="username != null and username != ''and username != 'test'">
+                    <!--                    bind标签多用于模糊查询，可以修改传入的值格式-->
+                    <bind name="username" value="'%'+ username + '%'"/>
+                    and username like #{username}
+                </when>
+                <when test="username == '%test%'">
+                    and soundex(username) = soundex('bl')
+                </when>
+            </choose>
+        </where>
     </select>
 
     <select id="findTotal" resultType="java.lang.Integer">
@@ -35,4 +65,24 @@
     <select id="findByPage" resultType="com.IceCoLa.domain.User" parameterType="map">
         select * from user limit #{pageStart},#{pageSize}
     </select>
+
+    <!--    <update id="test" parameterType="test">-->
+    <!--        <trim prefix="在字符串前加" prefixOverrides="在字符串前去掉" suffix="在字符串后加" suffixOverrides="在字符串后加">-->
+    <!--            sql-->
+    <!--        </trim>-->
+    <!--    </update>-->
+    <select id="findByList" parameterType="list" resultType="com.IceCoLa.domain.User">
+        select * from user where id in
+        <foreach collection="list" item="idNum" open="(" close=")" separator=",">
+            #{idNum}
+        </foreach>
+    </select>
+
+<!--    批量插入-->
+    <insert id="insUsers" parameterType="list">
+        insert into user values
+            <foreach collection="list" item="newUser" open="(" close=")" separator="),(">
+                default,#{newUser.username},#{newUser.birthday},#{newUser.sex},#{newUser.address}
+            </foreach>
+    </insert>
 </mapper>
