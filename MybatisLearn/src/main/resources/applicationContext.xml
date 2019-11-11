@@ -12,9 +12,12 @@
         <property name="id" value="123"/>
         <property name="name" value="威廉"/>
         <property name="sets">
-            <value>1</value>
-            <value>1</value>
-            <value>1</value>
+            <set>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+            </set>
         </property>
     </bean>
 
