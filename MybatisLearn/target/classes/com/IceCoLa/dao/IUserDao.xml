@@ -3,7 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dte/mybatis-3-mapper.dtd">
 <mapper namespace="com.IceCoLa.dao.IUserDao">
-<!--    表示对二级缓存允许访问，即在factory层次都能共享一个缓存，而不是一个SqlSession对象一个缓存-->
+    <!--    表示对二级缓存允许访问，即一个SqlSessionFactory对象有一个一个缓存，而不是一个SqlSession对象一个缓存，此时由一个factory对象产生的两个
+    SqlSession对象可以公用一份缓存-->
     <cache readOnly="true"/>
     <!--配置查询所有-->
     <select id="findAll" resultType="com.IceCoLa.domain.User">
@@ -77,11 +78,28 @@
         </foreach>
     </select>
 
-<!--    批量插入-->
+    <!--    批量插入-->
     <insert id="insUsers" parameterType="list">
         insert into user values
-            <foreach collection="list" item="newUser" open="(" close=")" separator="),(">
-                default,#{newUser.username},#{newUser.birthday},#{newUser.sex},#{newUser.address}
-            </foreach>
+        <foreach collection="list" item="newUser" open="(" close=")" separator="),(">
+            default,#{newUser.username},#{newUser.birthday},#{newUser.sex},#{newUser.address}
+        </foreach>
     </insert>
+
+    <!--&lt;!&ndash;&lt;!&ndash;    配置返回值的映射关系也可以使用resultMap标签&ndash;&gt;&ndash;&gt;-->
+    <!--    <resultMap id="userTest" type="User">-->
+    <!--        <id column="id" property="idTest"/>-->
+    <!--        <result column="username" property="usernameTest"/>-->
+    <!--        <result column="address" property="addressTest"/>-->
+    <!--        <result column="id" property="id"/>-->
+    <!--&lt;!&ndash;        关联对象&ndash;&gt;-->
+    <!--        <association property="id" select="com.IceCoLa.dao.IProductDao.selectById" column="id"/>-->
+    <!--    </resultMap>-->
+    <!--    <select id="selectAll" resultMap="userTest">-->
+    <!--        select * from user-->
+    <!--    </select>-->
+    <!--    如上所示：在resultMap标签中id属性配置别名，与下边SQL标签的返回映射属性对应，type属性表示映射到的实体类，
+    在下边 id标签配置主键，result标签配置其他属性，column属性为数据库中列名，property属性为实体类中对应的变量名
+    可通过association 标签链接其他的表，property：实体类中的属性名，select通过哪个查询查询出这个对象，即为namespace.id
+    column为将数据库中的clientid列的值作为参数传给另一个查询-->
 </mapper>

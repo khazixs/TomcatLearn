@@ -157,3 +157,21 @@ DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user
 DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
 DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
 DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.5
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==>  Preparing: select count(id) from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
+DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: 2(Integer), 2(Integer)
+DEBUG main com.IceCoLa.dao.IUserDao.findByPage - <==      Total: 2
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:21:23 CST 2019]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:25:59 CST 2019]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:36:36 CST 2019]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:37:04 CST 2019]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:47:06 CST 2019]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
