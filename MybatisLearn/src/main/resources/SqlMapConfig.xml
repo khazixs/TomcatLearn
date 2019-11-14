@@ -24,10 +24,6 @@
 
 <!--    指定映射配置文件的位置，映射配置文件指的是每个dao独立的配置文件 ;如果使用注解的形式来配置的话，此处应该使用class属性指定被注解的全限定类名-->
     <mappers>
-<!--        <mapper resource="com/IceCoLa/dao/IUserDao.xml"/>-->
-<!--&lt;!&ndash;        <mapper class="com.IceCoLa.dao.IUserDao"/>&ndash;&gt;-->
-<!--        <mapper resource="com/IceCoLa/dao/IProductDao.xml"/>-->
-<!--        <mapper resource="com/IceCoLa/dao/IPurchaserDao.xml"/>-->
 <!--        直接使用package配置则同时支持注解和接口绑定-->
         <package name="com.IceCoLa.dao"/>
     </mappers>
