@@ -6,6 +6,36 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop
         https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--AOP——配置前置消息-->
+    <bean id="myBefore" class="com.IceCoLa.advice.MyBeforeAdvice"/>
+    <bean id="myAfter" class="com.IceCoLa.advice.MyAfterAdvice"/>
+    <bean id="demo" class="com.IceCoLa.test.Demo"/>
+    <aop:config>
+        <!--<aop:pointcut id="myPoint" expression="execution(* com.IceCoLa.test.Demo.demo2())"/>-->
+        <!--通配符表示匹配任意类名，任意一级包名，..表示匹配任意方法参数-->
+        <aop:pointcut id="myPoint" expression="execution(* com.IceCoLa.test.Demo.*(..))"/>
+        <aop:advisor advice-ref="myBefore" pointcut-ref="myPoint"/>
+        <aop:advisor advice-ref="myAfter" pointcut-ref="myPoint"/>
+    </aop:config>
+    <bean id="myException" class="com.IceCoLa.advice.MyThrowAdvice"/>
+    <aop:config>
+        <aop:aspect ref="myException">
+            <aop:pointcut id="myPoint2" expression="execution(* com.IceCoLa.test.Demo.demo1(..))"/>
+            <aop:after-throwing method="myThrow" pointcut-ref="myPoint2"/>
+        </aop:aspect>
+    </aop:config>
+
+
+    <!--    数据源封装类。数据源：获取数据库连接-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+        <property name="username" value="root"/>
+        <property name="password" value="526995"/>
+    </bean>
+    <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
     <!--    id表示获取到对象的标识，class标识需要实例化的类-->
     <!--    <bean id="peo" class="com.IceCoLa.domain.People">-->
     <!--        配置构造方法参数,几个参数不必都出现-->
@@ -37,26 +67,9 @@
     <!--        <property name="sex" value=""/>-->
     <!--        <property name="birthday" value=""/>-->
     <!--    </bean>-->
-    <bean id="mba" class="com.IceCoLa.domain.MyBeforeAdvice"/>
-
-    <aop:config proxy-target-class="true" expose-proxy="true">
-        <aop:pointcut id="myPoint" expression="execution(* com.IceCoLa.test.Demo())"/>
-        <aop:advisor advice-ref="mba" pointcut-ref="myPoint"/>
-    </aop:config>
-    <!--    数据源封装类。数据源：获取数据库连接-->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/test"/>
-        <property name="username" value="root"/>
-        <property name="password" value="526995"/>
-    </bean>
-
-    <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    <!--扫描器相当于mybatis,xml中mappers下的package标签-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.IceCoLa.dao"/>
-        <property name="sqlSessionFactory" ref="factory"/>
-    </bean>
+    <!--    &lt;!&ndash;扫描器相当于mybatis,xml中mappers下的package标签&ndash;&gt;-->
+    <!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+    <!--        <property name="basePackage" value="com.IceCoLa.dao"/>-->
+    <!--        <property name="sqlSessionFactory" ref="factory"/>-->
+    <!--    </bean>-->
 </beans>
