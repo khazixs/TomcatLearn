@@ -13,10 +13,13 @@ public class TestAop {
 //        demo.demo2();
 //        demo.demo3();
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Demo demo = ac.getBean("demo", Demo.class);
-        demo.demo1();
-        demo.demo2("HelloSpring");
-        String strRet = demo.demo3();
-        System.out.println(strRet);
+//        Demo demo = ac.getBean("demo", Demo.class);
+//        demo.demo1();
+//        demo.demo2("HelloSpring");
+//        String strRet = demo.demo3();
+//        System.out.println(strRet);
+//        demo.demo4();
+        TestAspectJDemo testAspectJDemo = ac.getBean("testAspectJDemo",TestAspectJDemo.class);
+        testAspectJDemo.Demo1();
     }
 }

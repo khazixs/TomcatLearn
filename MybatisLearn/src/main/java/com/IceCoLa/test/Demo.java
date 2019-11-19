@@ -5,7 +5,6 @@ package com.IceCoLa.test;/*
 
 public class Demo {
     public void demo1() {
-        System.out.println(1/0);
         System.out.println("demo1");
     }
 
@@ -16,5 +15,9 @@ public class Demo {
     public String demo3() {
         System.out.println("demo3");
         return "demo3返回值";
+    }
+
+    public void demo4() {
+        System.out.println("demo4");
     }
 }

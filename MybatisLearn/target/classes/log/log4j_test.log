@@ -252,3 +252,11 @@ DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]
 DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
 DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
 DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
+DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
+DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13

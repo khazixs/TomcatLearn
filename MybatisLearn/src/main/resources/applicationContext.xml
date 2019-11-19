@@ -2,10 +2,72 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop
-        https://www.springframework.org/schema/aop/spring-aop.xsd">
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd"
+       default-autowire="byName"
+>
+    <!--该标签用于加载配置文件到容器中-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!--该标签是为了让spring扫描指定包中的注解，使其生效-->
+    <!--<context:component-scan base-package="com.IceCoLa.test"/>-->
+
+    <bean id="test01" class="com.IceCoLa.test.Test01"/>
+    <!--    数据源封装类。数据源：获取数据库连接 这个类相当于是
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "526995")
+    -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!--这一个类为生成SQL语句生产工厂，专门生产SQL语句，其实这个类有一个属性为DataSource,此处是使用了自动注入，所以省略了
+    相当于Mybatis中的SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
+    SqlSessionFactoryBean实现了 Spring 的 FactoryBean 接口。这就说明了由 Spring 最终创建的 bean 不是 SqlSessionFactoryBean 本身
+     而是工厂类的 getObject()返回的方法的结果。这种情况下,Spring 将会在应用启动时为你 创建 SqlSessionFactory 对象
+     然后将它以 SqlSessionFactory 为名来存储。
+    -->
+    <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean"/>
+    <!--这个类是一个扫描器，相当于mybatis,xml中mappers下的package标签-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.IceCoLa.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="factory"/>
+    </bean>
+
+
+    <bean id="user" class="com.IceCoLa.domain.User"/>
+    <bean id="purchaser" class="com.IceCoLa.domain.Purchaser"/>
+    <bean id="product" class="com.IceCoLa.domain.Product"/>
+
+    <!--    id表示获取到对象的标识，class标识需要实例化的类-->
+    <!--    <bean id="peo" class="com.IceCoLa.domain.People">-->
+    <!--        配置构造方法参数,几个参数不必都出现-->
+    <!--        <constructor-arg index="0" name="id" type="int" value="000"/>-->
+    <!--        <constructor-arg index="1" name="name" type="java.lang.String" value="default"/>-->
+    <!--        bean设置注入本质上使用的是实例对象的set方法-->
+    <!--        <property name="id" value="123"/>-->
+    <!--        <property name="name" value="威廉"/>-->
+    <!--        <property name="sets">-->
+    <!--            <set>-->
+    <!--                <value>1</value>-->
+    <!--                <value>2</value>-->
+    <!--                <value>3</value>-->
+    <!--                <value>4</value>-->
+    <!--            </set>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+    <!--    实例工厂配置-->
+    <!--    <bean id="factory" class="com.IceCoLa.domain.PeopleFactory"/>-->
+    <!--    <bean id="peo1" factory-bean="factory" factory-method="newInstance"/>-->
+    <!--    静态工厂配置-->
+    <!--    <bean id="peo2" class="com.IceCoLa.domain.PeopleFactory" factory-method="newInstance"/>-->
+
     <!--AOP——配置前置消息-->
     <bean id="myBefore" class="com.IceCoLa.advice.MyBeforeAdvice"/>
     <bean id="myAfter" class="com.IceCoLa.advice.MyAfterAdvice"/>
@@ -24,52 +86,28 @@
             <aop:after-throwing method="myThrow" pointcut-ref="myPoint2"/>
         </aop:aspect>
     </aop:config>
+    <!--环绕通知就是将前置通知和后置通知都写到一个通知里面-->
+    <bean id="myAround" class="com.IceCoLa.advice.MyAround"/>
+    <aop:config>
+        <aop:pointcut id="aroundPoint" expression="execution(* com.IceCoLa.test.Demo.demo4())"/>
+        <aop:advisor advice-ref="myAround" pointcut-ref="aroundPoint"/>
+    </aop:config>
 
 
-    <!--    数据源封装类。数据源：获取数据库连接-->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/test"/>
-        <property name="username" value="root"/>
-        <property name="password" value="526995"/>
-    </bean>
-    <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    <!--    id表示获取到对象的标识，class标识需要实例化的类-->
-    <!--    <bean id="peo" class="com.IceCoLa.domain.People">-->
-    <!--        配置构造方法参数,几个参数不必都出现-->
-    <!--        <constructor-arg index="0" name="id" type="int" value="000"/>-->
-    <!--        <constructor-arg index="1" name="name" type="java.lang.String" value="default"/>-->
-    <!--        bean设置注入本质上使用的是实例对象的set方法-->
-    <!--        <property name="id" value="123"/>-->
-    <!--        <property name="name" value="威廉"/>-->
-    <!--        <property name="sets">-->
-    <!--            <set>-->
-    <!--                <value>1</value>-->
-    <!--                <value>2</value>-->
-    <!--                <value>3</value>-->
-    <!--                <value>4</value>-->
-    <!--            </set>-->
-    <!--        </property>-->
-    <!--    </bean>-->
+    <!--AspectJ一个类实现所有通知-->
 
-    <!--    实例工厂配置-->
-    <!--    <bean id="factory" class="com.IceCoLa.domain.PeopleFactory"/>-->
-    <!--    <bean id="peo1" factory-bean="factory" factory-method="newInstance"/>-->
+    <bean id="testAspectJDemo" class="com.IceCoLa.test.TestAspectJDemo"/>
+    <bean id="myAdvice" class="com.IceCoLa.advice.MyAdvice"/>
+    <aop:config>
+        <aop:aspect ref="myAdvice">
+            <aop:pointcut id="point1" expression="execution(* com.IceCoLa.test.TestAspectJDemo.Demo1())"/>
+            <aop:before method="myBefore" pointcut-ref="point1"/>
+            <!--此处交换后置通知的位置可以改变两种后置通知的执行顺序-->
+            <aop:after-returning method="myAfterReturning" pointcut-ref="point1"/>
+            <aop:after method="myAfter" pointcut-ref="point1"/>
+            <aop:after-throwing method="myThrow" pointcut-ref="point1"/>
+            <aop:around method="myAround" pointcut-ref="point1"/>
+        </aop:aspect>
+    </aop:config>
 
-    <!--    静态工厂配置-->
-    <!--    <bean id="peo2" class="com.IceCoLa.domain.PeopleFactory" factory-method="newInstance"/>-->
-    <!--    <bean id="user" class="com.IceCoLa.domain.User">-->
-    <!--        <property name="username" value=""/>-->
-    <!--        <property name="id" value=""/>-->
-    <!--        <property name="address" value=""/>-->
-    <!--        <property name="sex" value=""/>-->
-    <!--        <property name="birthday" value=""/>-->
-    <!--    </bean>-->
-    <!--    &lt;!&ndash;扫描器相当于mybatis,xml中mappers下的package标签&ndash;&gt;-->
-    <!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-    <!--        <property name="basePackage" value="com.IceCoLa.dao"/>-->
-    <!--        <property name="sqlSessionFactory" ref="factory"/>-->
-    <!--    </bean>-->
 </beans>
