@@ -3,19 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/aop
         https://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd"
-       default-autowire="byName"
->
+       default-autowire="byName">
     <!--该标签用于加载配置文件到容器中-->
     <context:property-placeholder location="classpath:db.properties"/>
     <!--该标签是为了让spring扫描指定包中的注解，使其生效-->
+    <!--<context:component-scan base-package="com.IceCoLa.test"/>-->
+
     <bean id="test01" class="com.IceCoLa.test.Test01"/>
-<!--    <context:component-scan base-package="com.IceCoLa.test"/>-->
     <!--    数据源封装类。数据源：获取数据库连接 这个类相当于是
     Class.forName("com.mysql.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "526995")
@@ -43,6 +46,46 @@
     <bean id="user" class="com.IceCoLa.domain.User"/>
     <bean id="purchaser" class="com.IceCoLa.domain.Purchaser"/>
     <bean id="product" class="com.IceCoLa.domain.Product"/>
+    <!--bean 标签默认是单例模式  -->
+    <bean id="people" class="com.IceCoLa.domain.People" scope="prototype"/>
+    <!--其实事务管理类也需要注入datasource对象，这里有自动注入就不写了-->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"/>
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <!--在这里声明需要事务管理的方法名 支持通配符-->
+            <!--read-only="true"表示只读事务查询方法建议使用-->
+            <!--propagation=""表示控制事务传播行为，即当一个具有事务控制的方法被另一个有事务控制的方法调用后，需要如何管理事务（新建事务、在实务中执行、把事务挂起或者报错）-->
+            <!--propagation="REQUIRED"默认值，表示如果有事务存在就将事务内遇到的其他事务放在本事务中处理，如果当前没事务就新建一个事务（李白？？）-->
+            <!--propagation="SUPPORTS"，表示当前有事务则在当前事务中处理，如果当前没事务就在非事务中处理（李商隐？？？）-->
+            <!--propagation="MANDATORY"，表示必须在事务中执行，如果当前有事务则在当前事务中处理，如果当前没事务就直接报错（傲娇属性~)-->
+            <!--propagation="REQUIRES_NEW"，表示必须在事务中执行，如果遇到新事务时候，当前有事务则把当前事务挂起，执行新事务，如果当前没事务就开启新事务执行新事务-->
+            <!--propagation="NOT_SUPPORTED"，表示必须在非事务中执行，如果遇到新事务时候，当前有事务则把当前事务挂起，在非事务中执行-->
+            <!--propagation="NEVER"，表示必须在非事务中执行，当前有事务则报异常，没事务正常执行-->
+            <!--propagation="NESTED"，表示必须在事务中执行，当前有事务则创建一个嵌套事务，如果没事务则新建事务-->
+
+            <!--isolation标签标示事务隔离级别-->
+            <!--事务隔离是为了保证在多线程或者并发访问下如何保证访问到的数据具有完整性-->
+            <!--脏读：一个事务A读取到另一个事务B中未提交的数据，另一个事务中数据可能进行了改变，此时A事务读取的数据可能和数据库中数据是不一致的，此时认为数据时脏数据，读取脏数据的过程称为脏读-->
+            <!--不可重复读：主要针对的是某行数据或行中某列；主要针对的操作是修改操作；两次读取在同一事务内；当事务A第一次读取事务后，事务B对事务A读取的数据进行修改，事务A中再次读取的数据和之前读取的数据不一致，过程不可重复读-->
+            <!--幻读：主要针对的操作是新增和删除；是两次事务的结果；事务A按照特定条件查询出结果，事务B新增一条符合条件的数据，事务A中查询的数据和数据库中的数据不一致，事务A好像出现了幻觉-->
+            <!--isolation="DEFAULT"默认值，表示由底层数据库自动判断应该是用什么隔离级别-->
+            <!--isolation="READ_UNCOMMITTED"表示可以读取未提交数据，可能出现脏读，不重复读，幻读，效率最高，最不安全-->
+            <!--isolation="READ_COMMITTED"表示只能读取其他事务已提交数据，可能出现不可重复读和幻读-->
+            <!--isolation="REPEATABLE_READ"表示读取的数据被添加锁，防止其他事物修改此数据，可以防止不可重复读和脏读，可能出现幻读-->
+            <!--isolation="REPEATABLE_READ"表示读取的数据被添加锁，防止其他事物修改此数据，可以防止不可重复读和脏读，可能出现幻读-->
+            <!--isolation="SERIALIZABLE"表示排队操作，对整个表添加锁，最安全效率最低-->
+            <!--rollback-for="java.lang.Exception"建议给定属性值，当手动抛异常时-->
+            <tx:method name="ins*" isolation="SERIALIZABLE" rollback-for="java.lang.Exception"/>
+            <tx:method name="upd*"/>
+            <tx:method name="del*"/>
+            <tx:method name="*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <!--切点范围设置大一些-->
+        <aop:pointcut id="servicePoint" expression="execution(* com.IceCoLa.service.serviceImpl.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="servicePoint"/>
+    </aop:config>
 
     <!--    id表示获取到对象的标识，class标识需要实例化的类-->
     <!--    <bean id="peo" class="com.IceCoLa.domain.People">-->

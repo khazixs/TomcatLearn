@@ -121,4 +121,16 @@
         <url-pattern>/gck</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>myFilter</filter-name>
+        <filter-class>com.IceCoLa.Learn.filter.myFilter01</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>myFilter</filter-name>
+        <url-pattern>/name</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>com.IceCoLa.Learn.listener.MyListener</listener-class>
+    </listener>
 </web-app>

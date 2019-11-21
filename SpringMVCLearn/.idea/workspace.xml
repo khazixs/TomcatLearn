@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b13fbe7e-cd4a-4fba-ae45-4c648f7890ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/.idea/libraries/web3sdk_2_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/resources/ca.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/resources/node.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/resources/node.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/resources/sdk.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/resources/sdk.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/test/java/com/IceCoLa/test/TestDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/test/java/com/IceCoLa/test/TestJackson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MybatisLearn/src/test/java/com/IceCoLa/test/TestSpringScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SpringMVCLearn_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SpringMVCLearn_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_18_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_18_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringMVCLearn.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/IceCoLa/test/test01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.45.7z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/project01_archive/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/project01_archive/META-INF/war-tracker" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/project01_war/project01 archive.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/.idea/artifacts/project01_archive.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/project01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/java/com/IceCoLa/dao/blockInfoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/ca.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/node.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/node.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/sdk.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/main/resources/sdk.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project01/src/test/java/Test01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyTomcatLearnDemo/.idea/artifacts/MyTomcatLearnDemo_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyTomcatLearnDemo/out/production/MyTomcatLearnDemo/com/IceCoLa/Learn/servlet/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MyTomcatLearnDemo/out/production/MyTomcatLearnDemo/com/IceCoLa/Learn/servlet/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyTomcatLearnDemo/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyTomcatLearnDemo/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MybatisLearn/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/src/main/java/com/IceCoLa/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/java/com/IceCoLa/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/src/main/java/com/IceCoLa/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/java/com/IceCoLa/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MybatisLearn/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/src/test/java/com/IceCoLa/test/TestUserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MybatisLearn/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/target/classes/com/IceCoLa/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MybatisLearn/target/classes/com/IceCoLa/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/target/classes/com/IceCoLa/service/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MybatisLearn/target/classes/com/IceCoLa/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MybatisLearn/target/test-classes/com/IceCoLa/test/TestUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MySpringWebLearn_war_exploded_archive/MySpringWebLearn_war_exploded archive.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war/MyTomcatLearnDemo_war.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war_exploded/WEB-INF/classes/com/IceCoLa/Learn/servlet/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war_exploded/WEB-INF/classes/com/IceCoLa/Learn/servlet/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war_exploded/ajaxData.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/MyTomcatLearnDemo_war_exploded/ajaxData.jsp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1TsdGIu40lsjdAnNxNMoEz3OB84" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.156" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="spring" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringMVCLearn" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="SpringMVCLearn:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/SpringMVCLearn_war" />
+          </settings>
+        </artifact>
+        <artifact name="SpringMVCLearn:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/SpringMVCLearn_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_SpringMVCLearn" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="javadebug" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="SpringMVCLearn:war" />
+          <artifact name="SpringMVCLearn:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b13fbe7e-cd4a-4fba-ae45-4c648f7890ca" name="Default Changelist" comment="" />
+      <created>1574252639221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574252639221</updated>
+      <workItem from="1574252645339" duration="1429000" />
+      <workItem from="1574302262410" duration="169000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

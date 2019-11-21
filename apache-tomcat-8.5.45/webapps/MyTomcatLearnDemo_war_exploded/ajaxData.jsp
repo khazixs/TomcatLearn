@@ -54,7 +54,7 @@
                     var tds = document.getElementById("mt").rows[0].cells;
                     var result = ajax.responseText;
                     var u1;
-                    eval("u1 =" + result);
+                    eval("u1 =" + result);//可以执行字符串表达式
                     tds[0].innerHTML = u1.id;
                     tds[1].innerHTML = u1.name;
                     tds[2].innerHTML = u1.price;

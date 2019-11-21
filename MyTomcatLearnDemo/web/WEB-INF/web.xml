@@ -127,7 +127,7 @@
     </filter>
     <filter-mapping>
         <filter-name>myFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/name</url-pattern>
     </filter-mapping>
 
     <listener>
