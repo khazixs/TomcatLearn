@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="SpringMVCLearn:war">
-    <output-path>$PROJECT_DIR$/../apache-tomcat-8.5.45/webapps/SpringMVCLearn_war</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/SpringMVCLearn_war</output-path>
     <root id="archive" name="SpringMVCLearn_war.war">
       <element id="artifact" artifact-name="SpringMVCLearn:war exploded" />
     </root>
