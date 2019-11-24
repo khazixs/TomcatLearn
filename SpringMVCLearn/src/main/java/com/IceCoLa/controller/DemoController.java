@@ -6,9 +6,7 @@ package com.IceCoLa.controller;/*
 import com.IceCoLa.pojo.Demo;
 import com.IceCoLa.pojo.People;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -41,5 +39,15 @@ public class DemoController {
         /*redirect：路径   此方式为重定向*/
         return "redirect:/main.jsp";
     }
+    /*设置了@ResponseBody的控制器，恒不跳转，直接将返回值类型以json形式返回*/
+    @ResponseBody
+    @GetMapping("/demo5")
+    public String demo5(){
+        People p = new People();
+        p.setAge(1);
+        p.setName("李林");
+        return "main.jsp";
+    }
+
 
 }

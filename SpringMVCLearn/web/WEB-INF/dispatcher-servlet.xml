@@ -8,24 +8,21 @@
                            https://www.springframework.org/schema/context/spring-context.xsd
                            http://www.springframework.org/schema/mvc
                            https://www.springframework.org/schema/mvc/spring-mvc.xsd">
-<!--    <bean id="demo123" class="com.IceCoLa.controller.DemoController"/>-->
-<!--    &lt;!&ndash;这个类用来解析请求&ndash;&gt;-->
-<!--    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
-<!--        <property name="urlMap">-->
-<!--            <map>-->
-<!--                &lt;!&ndash;解析出来的控制器的逻辑名&ndash;&gt;-->
-<!--                <entry key="demo" value-ref="demo123"/>-->
-<!--            </map>-->
-<!--        </property>-->
-<!--    </bean>-->
-<!--    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>-->
-    <!--使用注解进行简化配置-->
+
+    <!--注解扫描包-->
     <context:component-scan base-package="com.IceCoLa.controller"/>
+
     <!--注解驱动-->
-    <!--包含了HandlerMapping和HandlerAdapter的注解驱动类-->
     <mvc:annotation-driven/>
-    <!--静态资源不拦截,直接访问-->
+
+    <!--设置静态资源-->
     <mvc:resources mapping="/js/**" location="/js/"/>
-<!--    <mvc:resources mapping="/css/**" location="/css/"/>-->
-<!--    <mvc:resources mapping="/html/**" location="/html/"/>-->
+    <mvc:resources mapping="/css/**" location="/css/"/>
+    <mvc:resources mapping="/images/**" location="/images/"/>
+
+    <!--视图解析器-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>
