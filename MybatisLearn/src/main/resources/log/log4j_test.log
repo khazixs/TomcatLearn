@@ -1,262 +1,80 @@
-DEBUG main com.IceCoLa.test.Log4jTest - This is debug message.
-INFO main com.IceCoLa.test.Log4jTest - This is info message.
-ERROR main com.IceCoLa.test.Log4jTest - This is error message.
-DEBUG main com.IceCoLa.test.Log4jTest - This is debug message.
-INFO main com.IceCoLa.test.Log4jTest - This is info message.
-ERROR main com.IceCoLa.test.Log4jTest - This is error message.
-DEBUG main org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
-DEBUG main org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
-DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 540585569.
-DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2038ae61]
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 4
-DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2038ae61]
-DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2038ae61]
-DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 540585569 to pool.
-INFO main com.IceCoLa.test.Log4jTest - This is info message.
-ERROR main com.IceCoLa.test.Log4jTest - This is error message.
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 4
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==>  Preparing: select count(id) from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: null, 1(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==>  Preparing: select count(id) from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: 1(Integer), 1(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==>  Preparing: select count(id) from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: 0(Integer), 3(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - <==      Total: 3
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==>  Preparing: select count(id) from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: 2(Integer), 2(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - <==      Total: 2
-DEBUG main com.IceCoLa.dao.IUserDao.findById - ==>  Preparing: select * from user WHERE id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findById - ==> Parameters: 2(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findById - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findById - ==>  Preparing: select * from user WHERE id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findById - ==> Parameters: 2(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findById - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %小%(String)
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 0
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 3
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %test%(String)
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 0
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE order by username 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE soundex(username) = soundex('bl') 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 2
-DEBUG main com.IceCoLa.dao.IUserDao.findById - ==>  Preparing: select * from user WHERE id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findById - ==> Parameters: 2(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findById - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 3
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 8
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 3
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE soundex(username) = soundex('bl') 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 2
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id=? where id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET user.username=?,user.birthday=?,user.sex=?,user.address=? where user.id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: lan(String), 2019-11-10 13:51:13.002(Timestamp), 男(String), Japan(String), 5(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - <==    Updates: 1
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET id = ? username=?,birthday=?,sex=?,address=? where id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET id = ? username=?,birthday=?,sex=?,address=? where id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: 5(Integer), lan(String), 2019-11-10 13:55:05.756(Timestamp), 男(String), Japan(String), 5(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET id = 1 username=?,birthday=?,sex=?,address=? where id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: lan(String), 2019-11-10 13:56:27.695(Timestamp), 男(String), Japan(String), 5(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==>  Preparing: update user SET username=?,birthday=?,sex=?,address=? where id = ? 
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - ==> Parameters: lan(String), 2019-11-10 13:57:04.146(Timestamp), 男(String), Japan(String), 9(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.updateUser - <==    Updates: 0
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 8
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==>  Preparing: select * from user WHERE username like ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - ==> Parameters: %b%(String)
-DEBUG main com.IceCoLa.dao.IUserDao.findByName - <==      Total: 2
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ? ? ? ? ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ? ? ? ? ? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ( ? , ? , ? , ? , ? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user in ( ? , ? , ? , ? , ? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user where id in ( ? , ? , ? , ? , ? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 17(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - <==      Total: 5
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==>  Preparing: select * from user where id in ( ? , ? , ? , ? , ? , ? , ? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer), 8(Integer), 13(Integer), 17(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByList - <==      Total: 5
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? , default,?,?,?,? , default,?,?,?,? , default,?,?,?,? , default,?,?,?,? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: ayDa(String), null, null, null, ayDavBhb(String), null, null, null, ayDavBhbhNh[(String), null, null, null, ayDavBhbhNh[NEwb(String), null, null, null, ayDavBhbhNh[NEwbAKex(String), null, null, null
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: EuqJH(String), null, null, null, tBisg(String), null, null, null, gTNYK(String), null, null, null, quWQL(String), null, null, null, QUqoW(String), null, null, null
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: SQhDf(String), null, null, null, wWxXu(String), null, null, null, ilXCv(String), null, null, null, WCxaY(String), null, null, null, ppqdW(String), null, null, null
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==>  Preparing: insert into user values ( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ),( default,?,?,?,? ) 
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - ==> Parameters: gsnrr(String), null, null, null, nkroi(String), null, null, null, aafqo(String), null, null, null, ulsub(String), null, null, null, wutlt(String), null, null, null
-DEBUG main com.IceCoLa.dao.IUserDao.insUsers - <==    Updates: 5
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.5
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==>  Preparing: select count(id) from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findTotal - <==      Total: 1
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==>  Preparing: select * from user limit ?,? 
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - ==> Parameters: 2(Integer), 2(Integer)
-DEBUG main com.IceCoLa.dao.IUserDao.findByPage - <==      Total: 2
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:21:23 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:25:59 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:36:36 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:37:04 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Mon Nov 11 16:47:06 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 19:46:22 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 19:53:43 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-WARN main org.springframework.context.support.ClassPathXmlApplicationContext - Exception encountered during context initialization - cancelling refresh attempt
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in class path resource [applicationContext.xml]: Initialization of bean failed; nested exception is org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'birthday'; nested exception is java.lang.IllegalStateException: Cannot convert value of type [java.lang.String] to required type [java.util.Date] for property 'birthday': no matching editors or conversion strategy found
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
-	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
-	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
-	at com.IceCoLa.test.TestSpringMybatis.main(TestSpringMybatis.java:16)
-Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'birthday'; nested exception is java.lang.IllegalStateException: Cannot convert value of type [java.lang.String] to required type [java.util.Date] for property 'birthday': no matching editors or conversion strategy found
-	at org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:476)
-	at org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:512)
-	at org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:506)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.convertForProperty(AbstractAutowireCapableBeanFactory.java:1523)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1482)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
-	... 11 more
-Caused by: java.lang.IllegalStateException: Cannot convert value of type [java.lang.String] to required type [java.util.Date] for property 'birthday': no matching editors or conversion strategy found
-	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:287)
-	at org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:461)
-	... 17 more
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 19:54:37 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 19:55:11 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 19:57:28 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 19:59:09 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 20:03:39 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 20:04:07 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 20:07:04 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 20:07:20 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Thu Nov 14 20:07:43 CST 2019]; root of context hierarchy
-INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
-INFO main org.springframework.jdbc.datasource.DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
-DEBUG main com.IceCoLa.dao.IUserDao - Cache Hit Ratio [com.IceCoLa.dao.IUserDao]: 0.0
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==>  Preparing: select * from user 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - ==> Parameters: 
-DEBUG main com.IceCoLa.dao.IUserDao.findAll - <==      Total: 13
+ERROR RMI TCP Connection(3)-127.0.0.1 org.springframework.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from class path resource [applicationContext.xml]; nested exception is java.lang.NoClassDefFoundError: org/springframework/aop/TargetSource
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:414)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:515)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:443)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:325)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4699)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5165)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:714)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1720)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:287)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:483)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:432)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:287)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at com.sun.jmx.remote.security.MBeanServerAccessController.invoke(MBeanServerAccessController.java:468)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1408)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/aop/TargetSource
+	at org.springframework.context.annotation.AnnotationConfigUtils.registerAnnotationConfigProcessors(AnnotationConfigUtils.java:154)
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.registerComponents(ComponentScanBeanDefinitionParser.java:149)
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.parse(ComponentScanBeanDefinitionParser.java:88)
+	at org.springframework.beans.factory.xml.NamespaceHandlerSupport.parse(NamespaceHandlerSupport.java:74)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1411)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1401)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:172)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:142)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	... 60 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.aop.TargetSource
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1360)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1182)
+	... 71 more
