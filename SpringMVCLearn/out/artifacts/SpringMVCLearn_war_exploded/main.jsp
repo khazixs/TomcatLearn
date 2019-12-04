@@ -11,6 +11,17 @@
     <title>Title</title>
 </head>
 <body>
-    main.jsp
+main.jsp<br/>
+request:${requestScope.req}<br/>
+session:${sessionScope.session}<br/>
+sessionParam:${sessionScope.sessionParam}<br/>
+application:${applicationScope.application}
+<hr/>
+map:${requestScope.key}
+<hr/>
+model:${requestScope.model}
+<hr/>
+mav:${requestScope.mav}
+
 </body>
 </html>

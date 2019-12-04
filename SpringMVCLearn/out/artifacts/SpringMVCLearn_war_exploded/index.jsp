@@ -30,5 +30,14 @@
 </form>
 <br/>
 <a href="demo3/李哥/23">跳转啊</a>
+
+<hr/>
+<a href="download">下载</a>
+
+<form action="upload" enctype="multipart/form-data" method="post">
+    name:<input type="text" name="name"/>
+    file:<input type="file" name="file"/>
+    <input type="submit" value="submit">
+</form>
 </body>
 </html>
